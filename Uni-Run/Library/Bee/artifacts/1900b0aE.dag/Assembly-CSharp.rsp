@@ -373,6 +373,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/01.Scenes/NewBehaviourScript.cs"
 "Assets/02.scripts/BackgroundLoop.cs"
+"Assets/02.scripts/GameManager.cs"
 "Assets/02.scripts/PlayerController.cs"
 "Assets/02.scripts/ScrollingObject.cs"
 -langversion:9.0

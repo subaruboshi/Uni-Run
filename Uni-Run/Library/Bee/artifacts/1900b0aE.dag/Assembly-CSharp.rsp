@@ -374,6 +374,8 @@
 "Assets/01.Scenes/NewBehaviourScript.cs"
 "Assets/02.scripts/BackgroundLoop.cs"
 "Assets/02.scripts/GameManager.cs"
+"Assets/02.scripts/Platform.cs"
+"Assets/02.scripts/PlatformSpawner.cs"
 "Assets/02.scripts/PlayerController.cs"
 "Assets/02.scripts/ScrollingObject.cs"
 -langversion:9.0

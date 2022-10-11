@@ -36,10 +36,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-        void Update()
+
+    void Update()
     {
-        if(isGameover && Input.GetMouseButtonDown(0))
+        if (isGameover && Input.GetMouseButtonDown(0))
         {
             // 게임오버 상태에서 마우스 왼쪽 버튼을 클릭하면 현재 씬 재시작
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -48,13 +48,25 @@ public class GameManager : MonoBehaviour
     }
 
     // 점수를 증가시키는 메서드
-    public void AddScore(int newScore) 
+    public void AddScore(int newScore)
     {
+        // 게임오버가 아니라면
+        if (!isGameover)
+        {
+            // 점수를 증가
+            score += newScore;
+            scoreText.text = "Score : " + score;
+        }
+    }
 
-        // 플레이어 캐릭터 사망 시 게임오버를 실행하는 메서드
-        public void OnPlayerDead()
+    // 플레이어 캐릭터 사망 시 게임오버를 실행하는 메서드
+    public void OnPlayerDead()
     {
-        
+        // 현재 상태를 게임오버 상태로 변경
+        isGameover = true;
+        // 게임오버 UI를 활성화
+        gameoverUI.SetActive(true);
     }
 }
-}
+
+
